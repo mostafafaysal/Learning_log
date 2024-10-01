@@ -173,9 +173,9 @@ LOGIN_URL='users:login'
 
 
 
-from pathlib import Path
-from dotenv import load_dotenv
+# from pathlib import Path
+# from dotenv import load_dotenv
 
-load_dotenv(Path(__file__).resolve().parent.parent / '.env')
+# load_dotenv(Path(__file__).resolve().parent.parent / '.env')
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
