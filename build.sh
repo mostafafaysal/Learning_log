@@ -4,8 +4,8 @@ set -o errexit
 
 #!/bin/bash
 
-# Activate virtual environment
-source ll_env\Scripts\activate
+# # Activate virtual environment
+# source ll_env\Scripts\activate
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
 pip install -r requirements.txt
