@@ -1,4 +1,5 @@
 <p>
+  <link rel="shortcut icon" href="{% static 'img/fav.ico' %}">
     
         <a href="{% url 'learning_logs:index' %}">
             Learning log
@@ -12,7 +13,7 @@
     
         {% if user.is_authenticated%}
         - Hello, {{user.username}}
-          <!-- <p><a href="{% url 'users:logout' %}">Log out</a></p> -->
+          <!-- <p><a href="{% url 'users:logout' %}">Log out</a></p> -->s
            <form action="{% url 'users:logout' %}" method="post">
             {%csrf_token%}
             <button>Log out</button>
