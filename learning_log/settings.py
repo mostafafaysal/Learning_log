@@ -29,13 +29,13 @@ SECRET_KEY = 'django-insecure-@1^y8yxdex5d4b-+393gt92$cm05jx2$1wy8^d2nmq5k%190ku
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://learning-log-lydw.onrender.com', 'localhost', '0.0.0.0']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    #my apps
+    #my 
     'learning_logs',
     'users',
 
