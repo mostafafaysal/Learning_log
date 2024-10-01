@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+# Import dj-database-url at the beginning of the file.
+import dj_database_url
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -95,8 +99,9 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/learning_log',
+        default='postgresql://faysal:fLPW7VwklOhO1xhgHTTxpdTjXbR5FHnx@dpg-crtrkf1u0jms73br4iug-a/learning_log_sal',
         conn_max_age=600
+
     )
 }
 
@@ -165,8 +170,6 @@ LOGIN_URL='users:login'
 # django_heroku.settings(locals())
 
 
-# Import dj-database-url at the beginning of the file.
-import dj_database_url
 
 
 
