@@ -12,6 +12,19 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+
+
+
+
+
+
+
+
+
+
+
 # Import dj-database-url at the beginning of the file.
 import dj_database_url
 
@@ -20,11 +33,19 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+load_dotenv(BASE_DIR / '.env')
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@1^y8yxdex5d4b-+393gt92$cm05jx2$1wy8^d2nmq5k%190ku'
+# # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-@1^y8yxdex5d4b-+393gt92$cm05jx2$1wy8^d2nmq5k%190ku'
+
+
+
+# Load environment variables
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -69,7 +90,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [[os.path.join( BASE_DIR, 'templates')],],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
