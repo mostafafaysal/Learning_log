@@ -51,7 +51,7 @@ SECRET_KEY = 'django-insecure-@1^y8yxdex5d4b-+393gt92$cm05jx2$1wy8^d2nmq5k%190ku
 DEBUG = True
 
 # ALLOWED_HOSTS = ['https://learning-log-lydw.onrender.com', 'localhost', '0.0.0.0',"http://127.0.0.1:8000/"]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','https://learning-log-lydw.onrender.com']
 
 
 # Application definition
