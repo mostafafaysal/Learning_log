@@ -17,9 +17,7 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-commands = {
-    'createsu': 'createsu.Command',
-}
+
 
 if __name__ == '__main__':
     main()
