@@ -40,17 +40,18 @@ load_dotenv(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-@1^y8yxdex5d4b-+393gt92$cm05jx2$1wy8^d2nmq5k%190ku'
+SECRET_KEY = 'django-insecure-@1^y8yxdex5d4b-+393gt92$cm05jx2$1wy8^d2nmq5k%190ku'
 
 
 
 # Load environment variables
-SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://learning-log-lydw.onrender.com', 'localhost', '0.0.0.0']
+# ALLOWED_HOSTS = ['https://learning-log-lydw.onrender.com', 'localhost', '0.0.0.0',"http://127.0.0.1:8000/"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -90,7 +91,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [[os.path.join( BASE_DIR, 'templates')],],
+        'DIRS': [os.path.join( BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,22 +110,22 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://faysal:fLPW7VwklOhO1xhgHTTxpdTjXbR5FHnx@dpg-crtrkf1u0jms73br4iug-a/learning_log_sal',
-        conn_max_age=600
-
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgresql://faysal:fLPW7VwklOhO1xhgHTTxpdTjXbR5FHnx@dpg-crtrkf1u0jms73br4iug-a/learning_log_sal',
+#         conn_max_age=600
+
+#     )
+# }
 
 
 # Password validation
