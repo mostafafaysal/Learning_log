@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
+import corsheaders
 
 
 
@@ -61,6 +62,9 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
 
+
+    'corsheaders',
+
     #default python apps
     
     'django.contrib.admin',
@@ -76,6 +80,9 @@ MIDDLEWARE = [
 #for render
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
+
+    'corsheaders.middleware.CorsMiddleware',
 
 
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -205,3 +212,6 @@ LOGIN_URL='users:login'
 # load_dotenv(Path(__file__).resolve().parent.parent / '.env')
 
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+
+
+CORS_ALLOWED_ORIGINS =["https://learning-log-lydw.onrender.com"]
