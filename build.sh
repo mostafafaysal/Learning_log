@@ -20,4 +20,4 @@ python manage.py migrate
 
 # python manage.py createsuperuser --no-input --email=$DJANGO_SUPERUSER_EMAIL --username=$DJANGO_SUPERUSER_USERNAME --password=$DJANGO_SUPERUSER_PASSWORD
 
-python manage.py createsuperuser --no-input --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL 
+# python manage.py createsuperuser --no-input --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL 
