@@ -215,3 +215,5 @@ LOGIN_URL='users:login'
 
 
 CORS_ALLOWED_ORIGINS =["https://learning-log-lydw.onrender.com"]
+
+CSRF_TRUSTED_ORIGINS =["https://learning-log-lydw.onrender.com"]
